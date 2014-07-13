@@ -5,6 +5,21 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider
+  .state('home', {
+    url: "/home",
+    templateUrl: "home.html"
+  })
+  .state('music', {
+    url:"/music",
+    templateUrl: "music.html"
+  });
+  
+  $urlRouterProvider.otherwise("/home")
+  
+})
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -17,3 +32,5 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+

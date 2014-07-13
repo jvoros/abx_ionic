@@ -23,12 +23,32 @@
   </head>
   <body ng-app="starter">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+             
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+    
+    <script id="home.html" type="text/ng-template">
+    <!-- The title of the ion-view will be shown on the navbar -->
+    <ion-view title="Home">
+      <ion-content class="padding">
+        <!-- The content of the page -->
+        <a href="#/music">Go to music page!</a>
       </ion-content>
-    </ion-pane>
+    </ion-view>
+  </script>
+    
+  <script id="music.html" type="text/ng-template">
+    <!-- The title of the ion-view will be shown on the navbar -->
+    <ion-view title="Music">
+      <ion-content class="padding">
+        <h1>Music page!</h1>
+        <a href="#/music">Go to music page!</a>
+      </ion-content>
+    </ion-view>
+  </script>
+    
   </body>
 </html>
